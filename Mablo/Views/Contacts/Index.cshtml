@@ -1,0 +1,36 @@
+﻿@model Mablo.Models.Contact[]
+@{
+    ViewData["Title"] = "Lista de Contactos";
+}
+
+<h2>Todos Contactos</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome Completo</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Acções</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Address</td>
+                <td>
+                    <a class="btn btn-info" href="/Contacts/Detalhe/@item.Id">Ver mais</a>
+                    <a class="btn btn-danger" href="#">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

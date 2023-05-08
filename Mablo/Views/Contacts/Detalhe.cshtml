@@ -1,0 +1,19 @@
+﻿@model Mablo.Models.Contact
+@{
+    ViewData["Title"] = "Detalhes do Contacto";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h1>@Model.FullName</h1>
+        <hr />
+        <span><b>Email:</b> @Model.Email</span>
+        <br />
+        <span><b>Telefone:</b> @Model.Phone</span>
+        <br />
+        <span><b>Endereço:</b> @Model.Address</span>
+        <br />
+    </div>
+
+</div>
